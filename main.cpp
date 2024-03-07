@@ -27,7 +27,7 @@ int main()
             system("cd build && ./gradlew applyPatches && ./gradlew createReobfBundlerJar");
             event.edit_response("Starting server...");
             system("mkdir sv");
-            event.edit_response("Server started on 77.230.98.46:25565");
+            event.edit_response("Server started on 0.0.0.0:25565");
             for (const auto & entry : std::filesystem::directory_iterator("build/build/libs"))
                 system(std::string("cd sv && java -Xmx3G -jar ../").append(entry.path()).c_str());
             }
